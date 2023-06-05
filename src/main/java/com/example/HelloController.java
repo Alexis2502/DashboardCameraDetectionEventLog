@@ -54,8 +54,8 @@ public class HelloController {
         // Configuration
         var endpointBaseUrl = "https://7six8mafg2.execute-api.eu-central-1.amazonaws.com/prod";
         var endpointPath = "/api/v1/logs";
-        var authUsername = "it-admin";
-        var authPassword = "YX3Ncoxug31fko0i";
+        var authUsername = "admin";
+        var authPassword = "password";
 
         // Parameters (date range for event log fetch operation)
         var from = String.valueOf(fromDate.getValue());
