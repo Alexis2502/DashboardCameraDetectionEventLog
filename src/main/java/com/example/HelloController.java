@@ -60,7 +60,6 @@ public class HelloController {
         // Parameters (date range for event log fetch operation)
         var from = String.valueOf(fromDate.getValue());
         var to = String.valueOf(toDate.getValue());
-        String path = "C://Users/aleks/OneDrive/Pulpit";
 
         // Constructing the required objects
         var endpointUri = new URIBuilder(endpointBaseUrl + endpointPath)
@@ -76,13 +75,13 @@ public class HelloController {
 
             // Sending the request and fetching the response
             try (var httpResponse = httpClient.execute(httpRequest)) {
-                handleResponse(httpResponse,path);
+                handleResponse(httpResponse);
             }
         }
     }
 
     @SneakyThrows({IOException.class})
-    public void handleResponse(CloseableHttpResponse response,String path){
+    public void handleResponse(CloseableHttpResponse response){
         if (response.getCode() != 200) {
             System.out.println("Server returned error code: " + response.getCode());
             return;
